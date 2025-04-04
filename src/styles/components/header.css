@@ -1,0 +1,19 @@
+
+header {
+    background-color: var(--background-color-200);
+}
+
+
+header .container {
+    max-width: 1280px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .container a {
+    padding-inline: 1rem;
+}
