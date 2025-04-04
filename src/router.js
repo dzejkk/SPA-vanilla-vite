@@ -19,6 +19,12 @@ const routes = {
 const contentDiv = document.querySelector('#content');
 
 
+export const navigateTo = (url) => {
+    history.pushState(null,null, url);
+    router();
+}
+
+
 
 //handle navigation 
 
@@ -29,6 +35,9 @@ export const router = async () => {
     const view = routes[path] || notFoundView;
 
     contentDiv.innerHTML = await view();
+
+
+    setActiveLink(path);
 
     
 }
