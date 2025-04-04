@@ -1,0 +1,1 @@
+# Skuskam vytvorit SPA iba s Vitom a vanila JS
