@@ -1,21 +1,20 @@
 @import url(/src/styles/components/header.css);
 @import url(/src/styles/components/footer.css);
 
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  --max-width: 1440px;
+
   color-scheme: light dark;
   color: #ffffffde;
   background-color: #242424;
 
-
   --background-color-200: #181818;
 
   --color-text-accent: #277ee0de;
-
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +22,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+/* START */
 
 
 a {
@@ -35,20 +36,18 @@ a:hover {
 }
 
 body {
-
-
   margin: 0;
   min-width: 320px;
   height: 100vh;
   font-size: 16px;
-}
 
+  animation: fade-in 0.3s ease-in-out;
+}
 
 h1 {
   font-size: 2.5em;
   line-height: 1.1;
 }
-
 
 #app {
   height: 100%;
@@ -57,16 +56,14 @@ h1 {
 }
 
 #content {
-
   flex-grow: 1;
-  max-width: 1280px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding-inline: 2rem;
   text-align: center;
 }
 
 .logo {
-
   will-change: filter;
   transition: filter 300ms;
 }
@@ -76,8 +73,6 @@ h1 {
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
-
-
 
 button {
   border-radius: 8px;
@@ -98,3 +93,18 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
