@@ -1,12 +1,15 @@
 export function renderFooter() {
   const footerContainer = document.querySelector("#footer");
 
+  const date = new Date();
+
+  const formattedDate = date.toLocaleString("de-DE");
+
   footerContainer.innerHTML = `
 
       <div class="container">
-      <p>&copy; ${new Date().getFullYear()}VAnilla JS SPA. All rights reserved</p>
-
-    </div>
-    
+        <p>&copy; ${formattedDate} Vanilla JS SPA. All rights reserved</p>
+      </div>
+     
     `;
 }
